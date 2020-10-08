@@ -10,7 +10,7 @@ project using any of the following CI providers:
  * [GitLab CI](#gitlab-ci)
  * [GitHub Actions](#github-actions)
 
-To install, simply run the respective installer and allow the CI provider that you chose to watch repository changes
+To install, simply run the respective installer   and allow the CI provider that you chose to watch repository changes
 to start building on every pull request.
 
 If you want to test an individual module instead of a Drupal project, see Andrew Berry's
