@@ -20,6 +20,8 @@ Here is a clip that shows [how it works for CircleCI](https://www.youtube.com/wa
 
 ## Requirements
 
+
+
 The scripts assume that you have a Drupal 8 project created using [drupal-project](https://github.com/drupal-composer/drupal-project),
 which sets a well known foundation. If your project's directory
 structure differs from what _drupal-project_ sets up, you will need to
