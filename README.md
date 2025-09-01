@@ -219,3 +219,6 @@ project uses Drupal 8.5 or newer, which introduced a few changes at `web/core/ph
 To fix this, overwrite `.circleci/config/phpunit.xml` with `.circleci/config/phpunit-drupal-8.5.xml`
 if you are using CircleCI, or with `.travis/config/phpunit-drupal-8.5.xml` if you are using
 Travis CI.
+
+
+<!-- Security scan triggered at 2025-09-01 20:14:52 -->
